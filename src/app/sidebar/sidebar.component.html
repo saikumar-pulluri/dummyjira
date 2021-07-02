@@ -1,0 +1,34 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <div>
+      <p>Jira software</p>
+    </div>
+    <ul>
+      <li>
+        <a routerLink="backlog">Backlog</a>
+      </li>
+      <li>
+        <a routerLink="sprint">
+          Active sprints
+
+        </a>
+      </li>
+      <li>
+        <a routerLink="issues">
+          Issues
+
+        </a>
+      </li>
+    </ul>  
+  </mat-drawer>
+  <mat-drawer-content style="background-color:papayawhip;">
+  <button type="button" mat-button (click)="drawer.toggle()">
+    Toggle sidenav
+  </button>
+
+  <div>
+    
+    <router-outlet></router-outlet>
+  </div>
+  </mat-drawer-content>
+</mat-drawer-container>
